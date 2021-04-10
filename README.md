@@ -1,1 +1,0 @@
-aws eks --profile root --region us-east-1 update-kubeconfig --name terraform-eks-sajal
