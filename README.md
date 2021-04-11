@@ -122,12 +122,14 @@ terraform apply
 Set the context for  `.kube`
 
 ```bash
-aws eks --profile root --region us-east-1 update-kubeconfig --name terraform-eks-sajal
+aws eks --profile root --region us-east-1 update-kubeconfig --name terraform-eks-demo-sajal
 ```
 
 Apply the config map
 
 ```bash
+tf output config_map_aws_auth > /tmp/configmap-aws-auth.yml
+
 k apply -f /tmp/configmap-aws-auth.yml
 ```
 
